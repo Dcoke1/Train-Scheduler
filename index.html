@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
 	<meta charset="utf-8">
 	<title>Train Scheduler</title>
@@ -8,19 +7,118 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-
 <body>
+	
+	<!--Page Container Start -->
+	<div class="container">
+		<div id="header" class="row text-center">
+			<h1>All ABOARD!</h1>
+  			<button id="startBttn" class="btn btn-info">Click for current train schedule</button>
+		</div>
+	<!--Panel rows for train scedule information-->
+	<div class="row">
+	<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Trains</h3>
+			</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-1">
+				</div>
+				<div class="col-sm-2">
+					<p>	Train Name </p>
+				</div>
+				<div class="col-sm-2">
+					<p>	Destination </p>
+				</div>
+				<div class="col-sm-2">
+					<p>	Frequency (Min) </p>
+				</div>
+				<div class="col-sm-2">
+					<p>	Next Arrival </p>
+				</div>
+				<div class="col-sm-2">
+					<p>	(Min) to Next Arrival </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
 
+	<!--Input form for Adding a new Train-->
+	<div class="addNewTrain" class="row">
+		<div class="col-sm-6 panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Add New Train</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-2">
+						<label for="nameId">Train Name: </label>
+					</div>
+					<div class="col-xs-10">
+						<input type="text" id="nameId">
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="col-xs-2">
+						<label for="destinId">Destination: </label>
+					</div>
+					<div class="col-xs-10">
+						<input type="text" id="destinId">
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="col-xs-2">
+						<label for="arrivalId">First Arrival: </label>
+					</div>
+					<div class="col-xs-10">
+						<input type="text" id="arrivalId">
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="col-xs-2">
+						<label for="freqId">Frequency: </label>
+					</div>
+					<div class="col-xs-10">
+						<input type="text" id="freqId">
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="col-xs-2">
+						<button id="submitBtn" class="btn-info">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-
-
-
-
+		<!--Input Form for adding New City -->
+		<div class="col-xs-6 panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Add New City</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-xs-4">
+						<label for="nameId">New City Name: </label>
+					</div>
+					<div class="col-xs-4">
+						<input type="text" id="cityId">
+					</div>
+					<div class="col-xs-3">
+						<button id="cityBtn" class="btn-info">Add</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 <script type="text/javascript" src="assets/js.js"></script>
 </body>
 </html>
